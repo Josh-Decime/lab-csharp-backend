@@ -1,3 +1,5 @@
+using dotnetBats.Repositories;
+using dotnetBats.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using MySqlConnector;
 
-namespace lab-csharp-backend;
+namespace dotnetBats;
 
 public class Startup
 {
@@ -33,6 +35,9 @@ public class Startup
 
     services.AddScoped<AccountsRepository>();
     services.AddScoped<AccountService>();
+
+    services.AddSingleton<BatRepository>();
+    services.AddScoped<BatService>();
   }
 
   private void ConfigureCors(IServiceCollection services)

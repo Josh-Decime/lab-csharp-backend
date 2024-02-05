@@ -11,6 +11,6 @@ global using Dapper;
 global using CodeWorks.Utils;
 
 // APPLICATION SPECIFIC
-global using lab-csharp-backend.Repositories;
-global using lab-csharp-backend.Services;
-global using lab-csharp-backend.Models;
+global using dotnetBats.Repositories;
+global using dotnetBats.Services;
+global using dotnetBats.Models;
